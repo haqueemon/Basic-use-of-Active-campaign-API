@@ -29,14 +29,14 @@ Follow This 3 steps :
 		For example :
 
 		In codeigniter, i put "active-campaign" package into "application/libraries" folder.
-	    require_once('application/libraries/active-campaign/includes/ActiveCampaign.class.php');
+	    	require_once('application/libraries/active-campaign/includes/ActiveCampaign.class.php');
 
 	*) Make an object
 
 		For example:
 
 		$ac = new ActiveCampaign("https://example.api-us1.com", "e58b452sfw32fsdbgty5308e4e927e1fabb380a08b854hkri5we4g515d900bc29c2d0");
-	    // $ac = new ActiveCampaign("URL", "KEY");
+	    	// $ac = new ActiveCampaign("URL", "KEY");
 
 ### Code :
 
@@ -72,7 +72,6 @@ For core php follow this below code :
 		$contact_sync = $ac->api("contact/sync", $contact);
 
 
-
 		/**************************************************************************/
 		/****************		Update contact from a list 	***********/
 		/**************************************************************************/
@@ -86,7 +85,6 @@ For core php follow this below code :
 		    "status[{$contactListId}]"  => 1, // "Active" status
 		);
 		$contact_sync = $ac->api("contact/sync", $contact);
-
 
 
 		/***********************************************************************/
@@ -191,8 +189,6 @@ For core php follow this below code :
 		print_r($result);
 
 
-
-
 		/******************************************************************/
 		/**********	 Add tag in a contact Using Curl 	***********/
 		/******************************************************************/
@@ -252,8 +248,8 @@ For core php follow this below code :
 
 		function add_contact() {
 
-	        require_once('application/libraries/active-campaign/includes/ActiveCampaign.class.php');
-		    $ac = new ActiveCampaign("https://example.api-us1.com", "e58b452sfw32fsdbgty5308e4e927e1fabb380a08b854hkri5we4g515d900bc29c2d0");
+	        	require_once('application/libraries/active-campaign/includes/ActiveCampaign.class.php');
+		    	$ac = new ActiveCampaign("https://example.api-us1.com", "e58b452sfw32fsdbgty5308e4e927e1fabb380a08b854hkri5we4g515d900bc29c2d0");
 
 			$email = 'mrtest@gmail.com';
 			$firstName = 'Mr';
@@ -277,15 +273,14 @@ For core php follow this below code :
 
 		}
 
-
 		/***********************************************************************/
 		/*******	 Add contact in a list with custom field 	********/
 		/***********************************************************************/
 
 		function add_contact_with_custom_field() {
 
-	        require_once('application/libraries/active-campaign/includes/ActiveCampaign.class.php');
-		    $ac = new ActiveCampaign("https://example.api-us1.com", "e58b452sfw32fsdbgty5308e4e927e1fabb380a08b854hkri5we4g515d900bc29c2d0");
+	        	require_once('application/libraries/active-campaign/includes/ActiveCampaign.class.php');
+		    	$ac = new ActiveCampaign("https://example.api-us1.com", "e58b452sfw32fsdbgty5308e4e927e1fabb380a08b854hkri5we4g515d900bc29c2d0");
 
 			$email = 'mrtest@gmail.com';
 			$firstName = 'Mr';
@@ -315,15 +310,14 @@ For core php follow this below code :
 
 		}
 
-
 		/***************************************************************/
 		/***********	 Get all contacts for a specific list 	********/
 		/***************************************************************/
 
 		function get_all_contact() {
 
-	        require_once('application/libraries/active-campaign/includes/ActiveCampaign.class.php');
-		    $ac = new ActiveCampaign("https://example.api-us1.com", "e58b452sfw32fsdbgty5308e4e927e1fabb380a08b854hkri5we4g515d900bc29c2d0");
+	        	require_once('application/libraries/active-campaign/includes/ActiveCampaign.class.php');
+		    	$ac = new ActiveCampaign("https://example.api-us1.com", "e58b452sfw32fsdbgty5308e4e927e1fabb380a08b854hkri5we4g515d900bc29c2d0");
 
 			$list_id = 3;
 			$ac->version(2);
@@ -332,13 +326,9 @@ For core php follow this below code :
 
 			echo '<pre>';
 			print_r($allData);
-
 		}
 
-
 		For more example checkout "example/row-php/rowphp-example.php"
-
-
 	}
-
+	
 	?>
